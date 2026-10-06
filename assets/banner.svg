@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0a0d12" />
+    </linearGradient>
+
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="50%" stop-color="#8957e5" />
+      <stop offset="100%" stop-color="#3fb950" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 42px; fill: #ffffff; }
+      .subtitle { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 20px; fill: #8b949e; }
+      .dash-line { stroke-dasharray: 8 8; animation: dash 20s linear infinite; }
+      @keyframes dash {
+        to { stroke-dashoffset: -100; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bg-grad)" rx="16" />
+  
+  <!-- Subtle Grid Lines -->
+  <path d="M0 50 H1200 M0 100 H1200 M0 150 H1200 M0 200 H1200 M0 250 H1200" stroke="#21262d" stroke-width="1" opacity="0.5" />
+  <path d="M200 0 V300 M400 0 V300 M600 0 V300 M800 0 V300 M1000 0 V300" stroke="#21262d" stroke-width="1" opacity="0.5" />
+
+  <!-- Animated Dynamic Background Network Graph -->
+  <g opacity="0.35">
+    <line x1="150" y1="70" x2="350" y2="120" stroke="#58a6ff" stroke-width="2" class="dash-line" />
+    <line x1="350" y1="120" x2="250" y2="230" stroke="#8957e5" stroke-width="2" class="dash-line" />
+    <line x1="250" y1="230" x2="150" y2="70" stroke="#3fb950" stroke-width="2" class="dash-line" />
+    <line x1="850" y1="80" x2="1050" y2="140" stroke="#58a6ff" stroke-width="2" class="dash-line" />
+    <line x1="1050" y1="140" x2="950" y2="240" stroke="#8957e5" stroke-width="2" class="dash-line" />
+    <line x1="950" y1="240" x2="850" y2="80" stroke="#3fb950" stroke-width="2" class="dash-line" />
+    <line x1="350" y1="120" x2="850" y2="80" stroke="#58a6ff" stroke-width="1.5" class="dash-line" />
+    <line x1="250" y1="230" x2="950" y2="240" stroke="#3fb950" stroke-width="1.5" class="dash-line" />
+
+    <circle cx="150" cy="70" r="6" fill="#58a6ff" />
+    <circle cx="350" cy="120" r="8" fill="#8957e5" />
+    <circle cx="250" cy="230" r="7" fill="#3fb950" />
+    <circle cx="850" cy="80" r="8" fill="#58a6ff" />
+    <circle cx="1050" cy="140" r="6" fill="#8957e5" />
+    <circle cx="950" cy="240" r="7" fill="#3fb950" />
+  </g>
+
+  <!-- Foreground Glow Line Divider -->
+  <rect x="100" y="205" width="1000" height="4" rx="2" fill="url(#accent-grad)" filter="url(#glow)" />
+
+  <!-- Center Foreground Content -->
+  <g text-anchor="middle">
+    <!-- Main Title -->
+    <text x="600" y="115" class="title">Awesome Centralized Network Management 🌐</text>
+    
+    <!-- Subtitle -->
+    <text x="600" y="165" class="subtitle">Curated Enterprise Controllers, Open-Source NMS, IPAM/DCIM &amp; SD-WAN Operations</text>
+  </g>
+</svg>
